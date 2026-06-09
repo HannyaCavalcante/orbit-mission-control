@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "orbit-web",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "cwd": "C:\\Users\\hanny\\OneDrive\\Área de Trabalho\\Hannya\\Projetos\\Orbit\\web",
+      "port": 5173
+    }
+  ]
+}
