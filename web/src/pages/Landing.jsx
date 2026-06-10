@@ -289,9 +289,9 @@ function SignalLine() {
 
 /* ─────────── DATA ─────────── */
 const TEAM = [
-  { name:'Hannya Cavalcante', role:'Planetary Geologist & Dev' },
-  { name:'Mariana Nikaido',   role:'Aerospace Engineer & Dev'  },
-  { name:'Gabriel Oliveira',  role:'Emergency Physician & Dev' },
+  { name:'Hannya Cavalcante', role:'Product Design & FullStack' },
+  { name:'Mariana Nikaido',   role:'UX & Visão Estratégica'     },
+  { name:'Gabriel Oliveira',  role:'UI & UX Centrada no Usuário'},
 ];
 
 const TECH = [
@@ -431,7 +431,7 @@ export default function Landing() {
 
           {/* Stats */}
           <div style={{ display:'flex', gap:'3rem', justifyContent:'center', marginTop:'4rem', flexWrap:'wrap', animation:'fadeInUp 0.8s ease both 1.2s', opacity:0 }}>
-            {[['3–22','min de latência'],['7','tripulantes'],['5','recursos'],['Sol 47','missão ativa']].map(([v,l]) => (
+            {[['3–22','min de latência'],['3','tripulantes'],['5','recursos'],['Sol 47','missão ativa']].map(([v,l]) => (
               <div key={l} style={{ textAlign:'center' }}>
                 <div style={{ fontSize:'1.8rem', fontWeight:900, background:'linear-gradient(135deg,#7dd3fc,#38bdf8)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' }}>{v}</div>
                 <div style={{ fontSize:'0.68rem', color:'var(--muted)', letterSpacing:1, textTransform:'uppercase', marginTop:2 }}>{l}</div>
