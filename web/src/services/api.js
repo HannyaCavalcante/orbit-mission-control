@@ -12,13 +12,18 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
-// Redireciona para login em caso de 401
+// Redireciona para login em caso de 401 (só se não estiver já em rota pública)
 api.interceptors.response.use(
   (res) => res,
   (err) => {
     if (err.response?.status === 401) {
-      localStorage.removeItem('orbit_token');
-      window.location.href = '/login';
+      const path = window.location.pathname;
+      const isPublic = path === '/login' || path === '/landing' || path.startsWith('/landing');
+      if (!isPublic) {
+        localStorage.removeItem('orbit_token');
+        localStorage.removeItem('orbit_user');
+        window.location.href = '/login';
+      }
     }
     return Promise.reject(err);
   }

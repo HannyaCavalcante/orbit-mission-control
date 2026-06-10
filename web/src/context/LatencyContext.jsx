@@ -8,6 +8,7 @@ export function LatencyProvider({ children }) {
   const [loading,  setLoading]  = useState(false);
 
   useEffect(() => {
+    if (!localStorage.getItem('orbit_token')) return;
     api.get('/config/latency').then(({ data }) => setDelayMs(data.delayMs)).catch(() => {});
   }, []);
 
