@@ -129,8 +129,8 @@ function TaskDetailModal({ task, crew, onClose, onUpdate }) {
   const nextCol = COLUMNS[statusIdx + 1];
 
   return (
-    <div style={MODAL_BG} onClick={e => e.target === e.currentTarget && onClose()}>
-      <div style={{
+    <div className="modal-overlay" style={MODAL_BG} onClick={e => e.target === e.currentTarget && onClose()}>
+      <div className="modal-box" style={{
         background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 16,
         width: '100%', maxWidth: 700, maxHeight: '90vh', display: 'flex', flexDirection: 'column',
       }}>
@@ -364,7 +364,7 @@ export default function Tasks() {
       </div>
 
       {/* Kanban */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem' }}>
+      <div className="kanban-board" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem' }}>
         {COLUMNS.map(col => {
           const colTasks = tasks.filter(t => t.status === col.key);
           return (

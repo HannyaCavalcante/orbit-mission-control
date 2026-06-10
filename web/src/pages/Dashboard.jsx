@@ -54,7 +54,7 @@ export default function Dashboard() {
       </div>
 
       {/* Stats */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
+      <div className="stat-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
         <StatCard icon="👨‍🚀" label="Tripulantes"         value={crew.length}            color="var(--accent2)" />
         <StatCard icon="🚨" label="Alertas críticos"    value={criticalAlerts.length}  color="var(--red)"     />
         <StatCard icon="📡" label="Msgs em trânsito"    value={pendingMessages.length} color="var(--orange)"  />
