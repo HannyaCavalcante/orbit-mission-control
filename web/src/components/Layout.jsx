@@ -3,14 +3,14 @@ import { useAuth } from '../context/AuthContext';
 import { useLatency } from '../context/LatencyContext';
 
 const NAV_ITEMS = [
-  { to: '/',          icon: '📊', label: 'Dashboard'   },
-  { to: '/messages',  icon: '💬', label: 'Mensagens'   },
-  { to: '/crew',      icon: '👨‍🚀', label: 'Tripulação' },
-  { to: '/tasks',     icon: '✅', label: 'Tarefas'     },
-  { to: '/alerts',    icon: '🚨', label: 'Alertas'     },
-  { to: '/log',       icon: '📋', label: 'Log'         },
-  { to: '/latency',    icon: '⏱️', label: 'Latência'   },
-  { to: '/satellites', icon: '🛰️', label: 'Satélites'  },
+  { to: '/app',             icon: '📊', label: 'Dashboard'   },
+  { to: '/app/messages',   icon: '💬', label: 'Mensagens'   },
+  { to: '/app/crew',       icon: '👨‍🚀', label: 'Tripulação' },
+  { to: '/app/tasks',      icon: '✅', label: 'Tarefas'     },
+  { to: '/app/alerts',     icon: '🚨', label: 'Alertas'     },
+  { to: '/app/log',        icon: '📋', label: 'Log'         },
+  { to: '/app/latency',    icon: '⏱️', label: 'Latência'   },
+  { to: '/app/satellites', icon: '🛰️', label: 'Satélites'  },
 ];
 
 export default function Layout() {

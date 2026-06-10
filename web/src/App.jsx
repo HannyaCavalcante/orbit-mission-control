@@ -15,17 +15,18 @@ import Satellites from './pages/Satellites';
 
 function PrivateRoute({ children }) {
   const { token } = useAuth();
-  return token ? children : <Navigate to="/login" replace />;
+  return token ? children : <Navigate to="/login" state={{ from: window.location.pathname }} replace />;
 }
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/"        element={<Landing />} />
         <Route path="/landing" element={<Landing />} />
         <Route path="/login"   element={<Login />} />
         <Route
-          path="/"
+          path="/app"
           element={
             <PrivateRoute>
               <Layout />

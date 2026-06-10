@@ -36,7 +36,7 @@ export default function Login() {
     setError(''); setLoading(true);
     try {
       await login(email, password);
-      navigate('/');
+      navigate('/app');
     } catch (err) {
       setError(err.response?.data?.error || 'Credenciais inválidas');
     } finally { setLoading(false); }
@@ -55,7 +55,7 @@ export default function Login() {
       });
       localStorage.setItem('orbit_token', data.token);
       localStorage.setItem('orbit_user', JSON.stringify(data.user));
-      navigate('/');
+      navigate('/app');
     } catch (err) {
       setError(err.response?.data?.error || 'Erro ao cadastrar');
     } finally { setLoading(false); }
